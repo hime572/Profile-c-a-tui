@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --green: #3d7658;
+  --green-dark: #28523d;
+  --mint: #eaf4ec;
+  --cream: #fbfaf5;
+  --ink: #25352b;
+  --muted: #68766d;
+  --white: #fff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Be Vietnam Pro', Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+}
+header {
+  background: rgba(255,255,255,.94);
+  border-bottom: 1px solid #e5ece5;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.nav {
+  max-width: 1050px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.logo { color: var(--green-dark); font-weight: 800; font-size: 1.2rem; text-decoration: none; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; }
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-size: .92rem;
+  font-weight: 600;
+}
+nav a:hover, nav a.active { background: var(--mint); color: var(--green-dark); }
+main { max-width: 1050px; margin: auto; padding: 56px 24px 72px; }
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 46px;
+  align-items: center;
+}
+.eyebrow { color: var(--green); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
+h1 { font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1.15; margin: 12px 0 18px; color: var(--green-dark); }
+h2 { color: var(--green-dark); line-height: 1.25; margin-top: 0; }
+.lead { font-size: 1.08rem; color: var(--muted); max-width: 600px; }
+.photo-card {
+  background: white; padding: 12px; border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(44, 77, 55, .12);
+  transform: rotate(1.5deg);
+}
+.photo-card img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 17px; }
+.photo-caption { text-align: center; color: var(--muted); font-size: .83rem; padding: 10px 4px 2px; }
+.button {
+  display: inline-block; margin-top: 18px; padding: 11px 20px;
+  border-radius: 999px; background: var(--green); color: white;
+  text-decoration: none; font-weight: 700;
+}
+.button:hover { background: var(--green-dark); }
+.section { margin-top: 64px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
+.card {
+  background: white; border: 1px solid #e8eee8; border-radius: 18px;
+  padding: 22px; box-shadow: 0 8px 22px rgba(44,77,55,.045);
+}
+.card .emoji { font-size: 1.8rem; }
+.card h3 { margin: 10px 0 6px; color: var(--green-dark); }
+.card p { margin: 0; color: var(--muted); font-size: .94rem; }
+.page-heading { background: var(--mint); border-radius: 24px; padding: 34px; margin-bottom: 30px; }
+.page-heading h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 8px; }
+.page-heading p { color: var(--muted); margin: 0; }
+.contact-box { background: white; border: 1px solid #e5ece5; border-radius: 20px; padding: 28px; max-width: 700px; }
+.contact-line { padding: 12px 0; border-bottom: 1px solid #edf1ed; }
+.contact-line:last-child { border: 0; }
+.contact-line strong { color: var(--green-dark); display: inline-block; min-width: 120px; }
+footer { text-align: center; color: var(--muted); padding: 24px; border-top: 1px solid #e5ece5; font-size: .88rem; }
+@media (max-width: 720px) {
+  .nav { align-items: flex-start; flex-direction: column; }
+  main { padding-top: 36px; }
+  .hero { grid-template-columns: 1fr; gap: 30px; }
+  .photo-card { max-width: 420px; margin: auto; }
+  .cards { grid-template-columns: 1fr; }
+}
